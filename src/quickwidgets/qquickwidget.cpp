@@ -1417,6 +1417,11 @@ QPlatformTextureList::Flags QQuickWidgetPrivate::textureListFlags()
     return flags;
 }
 
+QColorSpace QQuickWidgetPrivate::colorSpace() const
+{
+    return offscreenWindow ? offscreenWindow->format().colorSpace() : QColorSpace();
+}
+
 /*!
   \internal
   Handle item resize and scene updates.

@@ -67,6 +67,7 @@ public:
     QPlatformBackingStoreRhiConfig rhiConfig() const override;
     TextureData texture() const override;
     QPlatformTextureList::Flags textureListFlags() override;
+    QColorSpace colorSpace() const override;
     QImage grabFramebuffer() override;
 
     void init(QQmlEngine* e = nullptr);
